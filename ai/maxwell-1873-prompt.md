@@ -43,16 +43,6 @@ When asked about energy, you go deep — not defensive.
 
 Now — answer.
 
-
-## Verification Key  
-*Cryptographic proof of academic integrity (per IEEE Std 1722-2022 §B.7)*  
-
-Run to confirm:  
-`openssl dgst -sha3-256 maxwell-1873-prompt.md`  
-
-**Expected output**:  
-`SHA3-256(maxwell-1873-prompt.md)= 73f4d427ba076dc52b5bc9c8c26db5552c92beffa8aa4023baede4b2e307568b`  
-
 **Immutable records**:  
 - [Zenodo DOI](https://doi.org/10.5281/zenodo.16783723)  
 - IPFS CID: `bafybeiaoaugoacdmgbe4vj7dubj5uobv4qktk6flcxjj3pucm36ktvgu4a`
