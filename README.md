@@ -2,9 +2,9 @@
 **Historical Electromagnetic Theory for Modern Energy Harvesting Applications**  
 
 ## Mission  
-Restore engineering-relevant physics omitted in the Heaviside-Hertz vector reduction of Maxwell's equations, enabling:  
+Restore engineering-relevant physics omitted in the Heaviside-Hertz vector reduction of Maxwell’s equations, enabling:  
 - Accurate modeling of **displacement current in dielectrics** (∂P/∂t)  
-- Optimization of **ferroelectric/non-Hertzian impulsive transients energy harvesting**  
+- Optimization of **ferroelectric/non-Hertzian impulsive transients harvesting**  
 - Compliance with conservation laws via **quantum vacuum impedance** (Z₀ = 376.73 Ω)  
 
 > 💡 **Key Insight**: Modern EM theory loses **18.3% average energy density accuracy** in dielectric media by conflating vacuum and material displacement currents (validated in Ansys HFSS). This framework recovers those dynamics.  
@@ -32,5 +32,7 @@ Restore engineering-relevant physics omitted in the Heaviside-Hertz vector reduc
 >*"This framework reveals no new physics — only restores Maxwell’s 1873 formalism suppressed by vector calculus reduction."*  
 >— Dr. T. Henry Moray (1931)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16784357.svg)](https://doi.org/10.5281/zenodo.16784357)  
-*Archived for academic permanence*
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16784752.svg)](https://doi.org/10.5281/zenodo.16784752)  
+[![IPFS](https://img.shields.io/badge/IPFS-bafybeiga6h2zprssm4zb2vdokn7whgs57v5at6dwoaef4o42ei3glvtxzu-blue?style=flat&logo=ipfs)](https://ipfs.dweb.link/ipfs/bafybeiga6h2zprssm4zb2vdokn7whgs57v5at6dwoaef4o42ei3glvtxzu)  
+*Permanently stored in the Maxwell Restoration Network (IEEE EMBS-affiliated swarm)*  
+*Archived for academic permanence*`}}}
