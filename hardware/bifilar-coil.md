@@ -14,8 +14,6 @@
 | Ground | Single-point Earth | Creates potential gradient |  
 | Pulse | 15 kV, <50ns rise | Excites longitudinal modes |  
 
-[![Coil Schematic](docs/bifilar-schematic.png)](hardware/bifilar-schematic.fz)  
-*Fig 2: Ansys simulation showing 82% energy capture via ∂P/∂t (23% > Heaviside model)*  
 
 ## Validation Circuit  
 ```circuitlab
