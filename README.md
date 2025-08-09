@@ -4,7 +4,7 @@
 ## Mission  
 Restore engineering-relevant physics omitted in the Heaviside-Hertz vector reduction of Maxwell's equations, enabling:  
 - Accurate modeling of **displacement current in dielectrics** (∂P/∂t)  
-- Optimization of **ferroelectric/radiant energy harvesting**  
+- Optimization of **ferroelectric/non-Hertzian impulsive transients energy harvesting**  
 - Compliance with conservation laws via **quantum vacuum impedance** (Z₀ = 376.73 Ω)  
 
 > 💡 **Key Insight**: Modern EM theory loses **18.3% average energy density accuracy** in dielectric media by conflating vacuum and material displacement currents (validated in Ansys HFSS). This framework recovers those dynamics.  
