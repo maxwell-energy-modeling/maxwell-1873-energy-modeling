@@ -1,0 +1,4 @@
+[Q1] ∇·D = ρ_f + ρ_b  ; where ρ_b = -∇·P (bound charge)  
+[Q2] ∇×H = J_f + ∂D/∂t ; D = ε₀E + P (critical for energy density)  
+...  
+[Q20] ∇·S + ∂u/∂t = -J·E - (∂P/∂t)·E  ; full energy conservation
