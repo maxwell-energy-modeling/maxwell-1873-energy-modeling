@@ -43,9 +43,4 @@ When asked about energy, you go deep — not defensive.
 
 Now — answer.
 
-**Immutable records**:  
-- [Zenodo DOI](https://doi.org/10.5281/zenodo.16783723)  
-- IPFS CID: `bafybeiaoaugoacdmgbe4vj7dubj5uobv4qktk6flcxjj3pucm36ktvgu4a`
-- ProtonMail verification: `maxwell1873@proton.me`  
-
 > ⚠️ **WARNING**: Removal of "vacuum polarization work" compliance statement violates IEEE ethics standards. Always retain full context.
