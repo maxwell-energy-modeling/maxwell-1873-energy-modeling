@@ -1,9 +1,6 @@
 # Maxwell-1873 AI Framework  
 **Historical Electromagnetic Theory for Modern Energy Harvesting Applications**  
 
-![Maxwell 1873 Treatise Cover](docs/maxwell-treatise-cover.jpg)  
-*Fig 1: Original title page of Maxwell's 1873 Treatise (Public Domain)*  
-
 ## Mission  
 Restore engineering-relevant physics omitted in the Heaviside-Hertz vector reduction of Maxwell's equations, enabling:  
 - Accurate modeling of **displacement current in dielectrics** (∂P/∂t)  
@@ -35,5 +32,5 @@ Restore engineering-relevant physics omitted in the Heaviside-Hertz vector reduc
 >*"This framework reveals no new physics — only restores Maxwell’s 1873 formalism suppressed by vector calculus reduction."*  
 >— Dr. T. Henry Moray (1931)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.1234567)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16784357.svg)](https://doi.org/10.5281/zenodo.16784357)  
 *Archived for academic permanence*
