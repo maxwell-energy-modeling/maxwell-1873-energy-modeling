@@ -21,7 +21,12 @@ Restore engineering-relevant physics omitted in the Heaviside-Hertz vector reduc
 ## Getting Started  
 1. **For Researchers**: See [`/historical`](historical/) for Maxwell’s original equations  
 2. **For Engineers**: Run validation test in [`/ai`](ai/)  
-3. **For Builders**: Build the [Bifilar Harvesting Circuit](hardware/bifilar-coil.md)  
+3. **For Builders**: Build the [Bifilar Harvesting Circuit](hardware/bifilar-coil.md)
+
+## Research Website
+The research findings, mathematical derivations, and interactive visualizations are available on our official project website:
+
+👉 **[Maxwell Restoration Project Website](https://maxwell-energy-modeling.github.io/maxwell-1873-energy-modeling/)**
 
 ## Compliance Statement  
 >All outputs comply with:  
