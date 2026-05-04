@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Heaviside | Maxwell's Restoration</title>
+
+    <!-- Professional / Editorial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Spectral for editorial body, Fira Code for mathematics/technical, Outfit for modern UI -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Outfit:wght@300;400;600;800&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- KaTeX for rendering equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- Custom Aesthetics -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="top-nav fade-in-up delay-1">
+        <div class="nav-brand"><span class="accent-cyan">Maxwell</span>Restoration</div>
+        <div class="nav-links">
+            <a href="#abstract">Abstract</a>
+            <a href="#heaviside-truncation">The Truncation</a>
+            <a href="#original-equations">Original Framework</a>
+            <a href="#vacuum-properties">Beyond Vacuum</a>
+            <a href="#conclusion">Conclusion</a>
+            <button id="theme-toggle" class="theme-btn">Dark Mode</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content fade-in-up delay-2">
+            <h4 class="kicker">Neo-Editorial Scientific Archive</h4>
+            <h1 class="headline">Beyond Heaviside</h1>
+            <h2 class="subheadline">Reviving Maxwell’s Original Formulation for the Next Wave of Scientific Innovation
+            </h2>
+            <p class="author">An open resource for advancing electromagnetic knowledge</p>
+        </div>
+        <div class="hero-graphic fade-in-up delay-3">
+            <!-- Decorative geometric element -->
+            <div class="orb"></div>
+            <div class="formula-ambient">\[ \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \]</div>
+            <div class="formula-ambient secondary">\[ \mathbf{D} = \varepsilon_{0}\mathbf{E} + \alpha\,\mathbf{B} \]
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Scope and Intent -->
+        <section id="scope-intent" class="section-block bg-offset observe">
+            <div class="container text-center">
+                <h3 class="insight-title"
+                    style="margin-top: 0; padding: 2rem; max-width: 800px; margin: 0 auto; background: transparent; box-shadow: none; border: none;">
+                    <span class="accent-cyan">Scope, Intent, & Respect for Tradition</span></h3>
+                <p class="lead-text" style="max-width: 900px; margin: 0 auto 1.5rem auto;">
+                    This resource operates entirely within the framework of standard classical electrodynamics and
+                    quantum electrodynamics (QED). The argument presented here is strictly one of <strong>mathematical
+                        representation and pedagogical utility</strong>.
+                </p>
+                <div class="text-center" style="max-width: 900px; margin: 0 auto; color: var(--text-muted);">
+                    <p>Oliver Heaviside’s late-19th-century reduction of Maxwell's equations to a highly compact vector
+                        form stands as one of the great pedagogical achievements in physics. His formulation is
+                        mathematically exact for the domains it was designed to address, and it appropriately remains
+                        the foundation of introductory electromagnetism.</p>
+                    <p>Maxwell's original component-wise formulation and Heaviside's vector form encode the exact same
+                        physics and are mathematically equivalent. The scientific value of revisiting Maxwell's
+                        separated four-field framework (evaluating \(\mathbf{D}\), \(\mathbf{E}\), \(\mathbf{B}\), and
+                        \(\mathbf{H}\) as independent entities) lies in its explicit handling of tensorial constitutive
+                        relations. This decoupled architectural approach offers overwhelming analytical advantages when
+                        confronting the complexities of modern engineering—specifically within anisotropic, non-linear,
+                        bi-anisotropic, or topologically complex media.</p>
+                    <p>This site is offered as an open resource for engineers, physicists, and researchers who may find
+                        value in expanding their analytical toolkit. Constructive feedback and scholarly dialogue are
+                        warmly welcomed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abstract Section -->
+        <section id="abstract" class="section-block observe">
+            <div class="container layout-split">
+                <div class="split-left">
+                    <h2 class="section-title">Abstract</h2>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="split-right">
+                    <p class="lead-text">
+                        The four compact vector equations popularized by Oliver Heaviside have served as the backbone of
+                        classical electrodynamics for more than a century. Their elegance and ease of use are
+                        undeniable, yet they rest on a set of simplifying assumptions—linear, isotropic, homogeneous
+                        vacuum; rationalized units; and the omission of component‑wise detail—that can obscure subtle
+                        physical effects.
+                    </p>
+                    <p>
+                        This article argues that revisiting James Clerk Maxwell’s original component‑wise
+                        framework—comprising the full set of scalar relations for \(\mathbf{D}\), \(\mathbf{E}\),
+                        \(\mathbf{B}\), \(\mathbf{H}\), charge, and \(\mathbf{J}\)—offers a fertile ground for
+                        breakthroughs in emerging fields such as metamaterials, anisotropic nanophotonics, quantum
+                        electrodynamics, and high‑field plasma physics. By embracing the richer formalism, researchers
+                        can capture phenomena that the Heaviside truncation either hides or forces them to treat as
+                        ad‑hoc corrections.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Truncation & What is Lost -->
+        <section id="heaviside-truncation" class="section-block bg-offset observe">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">The Heaviside Simplification</h2>
+                    <p class="subtitle">What Heaviside Assumed & What Was Lost</p>
+                </div>
+
+                <div class="grid-table-container">
+                    <div class="grid-table">
+                        <div class="table-header">Assumption</div>
+                        <div class="table-header">Practical Consequence / What Got Hidden</div>
+
+                        <div class="table-cell trigger-highlight"><strong>Linear, isotropic vacuum</strong></div>
+                        <div class="table-cell">No direction-dependent response. Hidden component-wise couplings where
+                            \(\mathbf{D}= \boldsymbol{\varepsilon}(\mathbf{r},\omega)\mathbf{E}\).</div>
+
+                        <div class="table-cell trigger-highlight"><strong>Rationalized units</strong></div>
+                        <div class="table-cell">The \(4\pi\) factors were absorbed into \(\varepsilon_0, \mu_0\),
+                            removing explicit numerical constants but hiding physical origins.</div>
+
+                        <div class="table-cell trigger-highlight"><strong>Smooth differentiable fields</strong></div>
+                        <div class="table-cell">Allows \(\nabla\cdot\) and \(\nabla\times\). Condenses 20 scalars into 4
+                            vector equations, hiding localized edge behavior.</div>
+
+                        <div class="table-cell trigger-highlight"><strong>Charge conservation derived</strong></div>
+                        <div class="table-cell">The explicit continuity equation \(\partial\rho/\partial
+                            t+\nabla\!\cdot\!\mathbf{J}=0\) vanishes as a primary law.</div>
+
+                        <div class="table-cell trigger-highlight"><strong>Potentials treated as auxiliary</strong></div>
+                        <div class="table-cell">\(\mathbf{A}\) and \(\Phi\) are omitted from primary equations,
+                            obscuring direct gauge-theoretic structure.</div>
+                    </div>
+                </div>
+
+                <div class="insight-box">
+                    <h3 class="insight-title"><span class="accent-orange">Analysis:</span> The Core Limitation</h3>
+                    <p>
+                        In anisotropic crystals, metamaterials, or plasmonic nanostructures, the relationship between
+                        \(\mathbf{D}\) and \(\mathbf{E}\) (or \(\mathbf{B}\) and \(\mathbf{H}\)) is tensorial. The
+                        Heaviside form forces the researcher to re‑introduce these tensors as separate “material
+                        equations,” often leading to inconsistent notation and loss of symmetry.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Original Framework -->
+        <section id="original-equations" class="section-block observe">
+            <div class="container">
+                <h2 class="section-title text-center">Maxwell’s Original Formulation</h2>
+                <div class="accent-line center"></div>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem auto;">
+                    When Maxwell first presented his theory (1865 – 1873), the fields were split into <em>electric
+                        displacement</em> \(\mathbf{D}\), <em>electric intensity</em> \(\mathbf{E}\), <em>magnetic
+                        induction</em> \(\mathbf{B}\), and <em>magnetic intensity</em> \(\mathbf{H}\). The equations
+                    were written out for each Cartesian component, giving roughly twenty scalar relations.
+                </p>
+
+                <div class="equation-showcase">
+
+                    <div class="eq-card">
+                        <div class="eq-header">Gauss’s law for electricity</div>
+                        <div class="eq-math">\[ \frac{\partial D_x}{\partial x}+\frac{\partial D_y}{\partial
+                            y}+\frac{\partial D_z}{\partial z}= \rho \]</div>
+                        <div class="eq-desc">One scalar equation; divergence of the electric displacement equals free
+                            charge density.</div>
+                    </div>
+
+                    <div class="eq-card">
+                        <div class="eq-header">Ampère–Maxwell law</div>
+                        <div class="eq-math">\[ \begin{aligned}
+                            \frac{\partial H_z}{\partial y}-\frac{\partial H_y}{\partial z}&= J_x+\frac{\partial
+                            D_x}{\partial t}\\[4pt]
+                            \frac{\partial H_x}{\partial z}-\frac{\partial H_z}{\partial x}&= J_y+\frac{\partial
+                            D_y}{\partial t}\\[4pt]
+                            \frac{\partial H_y}{\partial x}-\frac{\partial H_x}{\partial y}&= J_z+\frac{\partial
+                            D_z}{\partial t}
+                            \end{aligned} \]</div>
+                        <div class="eq-desc">Three scalar equations. Relates curl of \(\mathbf{H}\) to conduction
+                            current plus the displacement current.</div>
+                    </div>
+
+                    <div class="eq-card">
+                        <div class="eq-header">Faraday’s law</div>
+                        <div class="eq-math">\[ \begin{aligned}
+                            \frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}&=-\frac{\partial
+                            B_x}{\partial t}\\[4pt]
+                            \frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}&=-\frac{\partial
+                            B_y}{\partial t}\\[4pt]
+                            \frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}&=-\frac{\partial
+                            B_z}{\partial t}
+                            \end{aligned} \]</div>
+                        <div class="eq-desc">Three scalar equations. Gives the curl of \(\mathbf{E}\) in terms of the
+                            time derivative of \(\mathbf{B}\).</div>
+                    </div>
+
+                    <div class="eq-card">
+                        <div class="eq-header">Potential definitions</div>
+                        <div class="eq-math">\[ \begin{aligned}
+                            \mathbf{B}&=\nabla\times\mathbf{A}\\[4pt]
+                            \mathbf{E}&=-\nabla\Phi-\frac{\partial\mathbf{A}}{\partial t}
+                            \end{aligned} \]</div>
+                        <div class="eq-desc">Optional in Maxwell’s original treatment, introducing scalar \(\Phi\) and
+                            vector \(\mathbf{A}\) potentials.</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Vacuum Properties -->
+        <section id="vacuum-properties" class="section-block bg-offset observe">
+            <div class="container layout-dense">
+                <div class="sidebar">
+                    <h2 class="section-title">Beyond the Classical Vacuum</h2>
+                    <p>Heaviside’s “truncation” treats vacuum as an ideal, linear, isotropic medium. Modern physics
+                        shows a far richer set of phenomena.</p>
+                </div>
+
+                <div class="content-list">
+
+                    <div class="content-item">
+                        <h4><span class="accent-cyan">01.</span> Quantum‑fluctuation phenomena</h4>
+                        <p><strong>Zero‑point electromagnetic field:</strong> Even without real photons, the sequence
+                            field has non‑zero ground state energy \(\tfrac{1}{2}\hbar\omega\). <em>(Heaviside's vacuum
+                                has no intrinsic energy).</em></p>
+                        <p><strong>Casimir effect:</strong> Attractive force between neutral conducting plates.</p>
+                    </div>
+
+                    <div class="content-item">
+                        <h4><span class="accent-cyan">02.</span> Vacuum polarization & non‑linear electrodynamics</h4>
+                        <p><strong>Virtual electron‑positron pairs:</strong> Polarize the vacuum in strong fields.
+                            <strong>Euler‑Heisenberg Lagrangian</strong> predicts photon‑photon scattering and
+                            field‑dependent refractive index at \(\gtrsim 10^{18}\,\text{V/m}\).
+                        </p>
+                    </div>
+
+                    <div class="content-item">
+                        <h4><span class="accent-cyan">03.</span> Topological & exotic phases</h4>
+                        <p><strong>Axion electrodynamics:</strong> Under a dynamical axion field
+                            \(\theta(\mathbf{x},t)\), Maxwell equations gain an extra term
+                            \(\theta\,\mathbf{E}\!\cdot\!\mathbf{B}\).</p>
+                        <p><strong>Magnetoelectric vacuum:</strong> Strong fields can induce cross-coupling like
+                            \(\mathbf{D} = \varepsilon_{0}\mathbf{E} + \alpha\,\mathbf{B}\).</p>
+                    </div>
+
+                    <div class="content-item">
+                        <h4><span class="accent-cyan">04.</span> Gravitational & geometric effects</h4>
+                        <p><strong>Effective metric:</strong> Light follows null geodesics in curved spacetime,
+                            essentially a gravitationally induced change in vacuum optical properties.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Frontiers / Conclusion -->
+        <section id="conclusion" class="section-block observe">
+            <div class="container text-center">
+                <h2 class="section-title">The Value of the Original Approach</h2>
+                <p class="lead-text" style="max-width: 800px; margin: 0 auto 2rem auto;">
+                    Embracing the full Maxwell framework is not a step backward; it is an expansion of our mathematical
+                    toolbox that equips us to tackle the subtle, multi‑scale phenomena defining the next generation of
+                    scientific discovery.
+                </p>
+
+                <div class="value-pillars">
+                    <div class="pillar">
+                        <div class="pillar-label">Explicit Control</div>
+                        <p>Over the distinct electromagnetic fields and their tensorial constitutive relations for
+                            Metamaterials and Transformation Optics.</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-label">Natural Pathway</div>
+                        <p>To incorporate anisotropy, non‑linearity, dispersion, and Quantum Plasmonics corrections
+                            seamlessly.</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-label">Conceptual Insight</div>
+                        <p>Deeper visibility into gauge invariance, charge conservation, and the interplay between
+                            fields and potentials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concrete Analytical Advantages -->
+        <section id="concrete-examples" class="section-block observe">
+            <div class="container">
+                <h2 class="section-title text-center">Concrete Analytical Advantages</h2>
+                <div class="accent-line center"></div>
+                <p class="text-center"
+                    style="max-width: 800px; margin: 0 auto 3rem auto; color: var(--text-muted); font-size: 1.2rem;">
+                    The explicit separation of the four fields provides a clear, practical advantage over using
+                    Heaviside's compact vector form in modern applications.
+                </p>
+
+                <div class="grid-table-container">
+                    <div class="insight-box" style="margin-top: 0; margin-bottom: 2rem;">
+                        <h3 class="insight-title" style="margin-top: 0;"><span class="accent-orange">Case Study
+                                I:</span> Transformation Optics & Cloaking</h3>
+                        <p><strong>The Challenge:</strong> Designing an invisibility cloak (e.g., Pendry, Schurig,
+                            Smith, 2006) requires bending space, which is mathematically emulated using highly complex,
+                            spatially varying, anisotropic metamaterials.</p>
+                        <p><strong>The Vector Limitation:</strong> Using Heaviside's curl equations, the dense material
+                            tensors (\(\boldsymbol{\varepsilon}\) and \(\boldsymbol{\mu}\)) become inextricably trapped
+                            inside the spatial differential operators. This results in highly coupled partial
+                            differential equations that fundamentally resist inverse design.</p>
+                        <p><strong>The Four-Field Solution:</strong> By separating the fields, the topological curl
+                            equations remain universally Cartesian and form-invariant. The entire coordinate
+                            transformation is algebraically absorbed by the constitutive relations (\(\mathbf{D} =
+                            \boldsymbol{\varepsilon}\mathbf{E}\) and \(\mathbf{B} = \boldsymbol{\mu}\mathbf{H}\)).
+                            Physicists extract the exact material parameters by calculating the Jacobian of the physical
+                            distortion—reducing an intractable PDE problem to straightforward linear algebra.</p>
+                    </div>
+
+                    <div class="insight-box"
+                        style="margin-top: 2rem; border-left-color: var(--accent-cyan); background: linear-gradient(90deg, rgba(0, 242, 255, 0.06), transparent);">
+                        <h3 class="insight-title" style="margin-top: 0;"><span class="accent-cyan">Case Study II:</span>
+                            Computational Electromagnetics (FDTD)</h3>
+                        <p><strong>The Challenge:</strong> Simulating broadband electromagnetics in complex media using
+                            discrete computational grids.</p>
+                        <p><strong>The Vector Limitation:</strong> Attempting to numerically integrate Heaviside's
+                            equations in an anisotropic medium requires inverting dense material tensors directly within
+                            the finite-difference approximation of the curl operator. Because electric and magnetic
+                            fields exist at different physical locations on a staggered grid, this forces hazardous
+                            spatial interpolations during time-stepping, leading to catastrophic numerical dispersion
+                            and instability.</p>
+                        <p><strong>The Four-Field Solution:</strong> The Yee Cell algorithm natively embraces the
+                            four-field separation. The algorithm executes a strict two-step process: (1) A pure,
+                            material-independent topological advance of \(\mathbf{D}\) and \(\mathbf{B}\) across the
+                            grid. (2) A strictly local, algebraic constitutive update converting \(\mathbf{D}\) to
+                            \(\mathbf{E}\) and \(\mathbf{B}\) to \(\mathbf{H}\). This explicit separation of variables
+                            is the absolute prerequisite for stable computational simulations of advanced metamaterials.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References -->
+        <section id="references" class="section-block bg-offset observe">
+            <div class="container">
+                <h2 class="section-title">References & Further Reading</h2>
+                <div class="accent-line"></div>
+
+                <div class="references-grid">
+                    <div class="ref-category">
+                        <h4 class="ref-title">Foundational Treatises</h4>
+                        <ul class="ref-list">
+                            <li><strong>Hehl, F. W. & Obukhov, Y. N.</strong> — <em>Foundations of Classical
+                                    Electrodynamics: Charge, Flux, and Metric.</em> Birkhäuser, 2003. ISBN
+                                978-0-8176-4222-8.</li>
+                            <li><strong>Post, E. J.</strong> — <em>Formal Structure of Electromagnetics: General
+                                    Covariance and Electromagnetics.</em> North-Holland, 1962. Reprinted by Dover, 1997.
+                                ISBN 978-0-486-65427-0.</li>
+                            <li><strong>Jackson, J. D.</strong> — <em>Classical Electrodynamics</em>, 3rd ed. Wiley,
+                                1998. ISBN 978-0-471-30932-1.</li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-category">
+                        <h4 class="ref-title">Transformation Optics & Metamaterials</h4>
+                        <ul class="ref-list">
+                            <li><strong>Pendry, J. B., Schurig, D. & Smith, D. R.</strong> — "Controlling
+                                Electromagnetic Fields." <em>Science</em> 312(5781): 1780–1782, 2006. <a
+                                    href="https://doi.org/10.1126/science.1125907" target="_blank"
+                                    rel="noopener noreferrer">DOI: 10.1126/science.1125907</a></li>
+                            <li><strong>Leonhardt, U.</strong> — "Optical Conformal Mapping." <em>Science</em>
+                                312(5781): 1777–1780, 2006. <a href="https://doi.org/10.1126/science.1126493"
+                                    target="_blank" rel="noopener noreferrer">DOI: 10.1126/science.1126493</a></li>
+                            <li><strong>Schurig, D. et al.</strong> — "Metamaterial Electromagnetic Cloak at Microwave
+                                Frequencies." <em>Science</em> 314(5801): 977–980, 2006. <a
+                                    href="https://doi.org/10.1126/science.1133628" target="_blank"
+                                    rel="noopener noreferrer">DOI: 10.1126/science.1133628</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-category">
+                        <h4 class="ref-title">Vacuum Birefringence & Non-Linear QED</h4>
+                        <ul class="ref-list">
+                            <li><strong>Heisenberg, W. & Euler, H.</strong> — "Folgerungen aus der Diracschen Theorie
+                                des Positrons." <em>Zeitschrift für Physik</em> 98: 714–732, 1936. <a
+                                    href="https://doi.org/10.1007/BF01343663" target="_blank"
+                                    rel="noopener noreferrer">DOI: 10.1007/BF01343663</a></li>
+                            <li><strong>Mignani, R. P. et al.</strong> — "Evidence for vacuum birefringence from the
+                                first optical-polarimetry measurement of the isolated neutron star RX J1856.5−3754."
+                                <em>Monthly Notices of strong Astronomical Society</em> 465(1): 492–500, 2017. <a
+                                    href="https://doi.org/10.1093/mnras/stw2798" target="_blank"
+                                    rel="noopener noreferrer">DOI: 10.1093/mnras/stw2798</a></li>
+                            <li><strong>Della Valle, F. et al. (PVLAS Collaboration)</strong> — "The PVLAS experiment: A
+                                25 year effort to measure vacuum magnetic birefringence." <em>Physics Reports</em> 871:
+                                1–74, 2020. <a href="https://doi.org/10.1016/j.physrep.2020.06.001" target="_blank"
+                                    rel="noopener noreferrer">DOI: 10.1016/j.physrep.2020.06.001</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-category">
+                        <h4 class="ref-title">Computational Electromagnetics & Bi-anisotropic Media</h4>
+                        <ul class="ref-list">
+                            <li><strong>Yee, K. S.</strong> — "Numerical Solution of Initial Boundary Value Problems
+                                Involving Maxwell's Equations in Isotropic Media." <em>IEEE Transactions on Antennas and
+                                    Propagation</em> 14(3): 302–307, 1966. <a
+                                    href="https://doi.org/10.1109/TAP.1966.1138693" target="_blank"
+                                    rel="noopener noreferrer">DOI: 10.1109/TAP.1966.1138693</a></li>
+                            <li><strong>Taflove, A. & Hagness, S. C.</strong> — <em>Computational Electrodynamics: The
+                                    Finite-Difference Time-Domain Method</em>, 3rd ed. Artech House, 2005. ISBN
+                                978-1-58053-832-9.</li>
+                            <li><strong>Serdyukov, A. N. et al.</strong> — <em>Electromagnetics of Bi-anisotropic
+                                    Materials: Theory and Applications.</em> Gordon and Breach, 2001. ISBN
+                                978-90-5699-044-3.</li>
+                            <li><strong>Wilczek, F.</strong> — "Two Applications of Axion Electrodynamics." <em>Physical
+                                    Review Letters</em> 58(18): 1799–1802, 1987. <a
+                                    href="https://doi.org/10.1103/PhysRevLett.58.1799" target="_blank"
+                                    rel="noopener noreferrer">DOI: 10.1103/PhysRevLett.58.1799</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p><strong>Maxwell's Restoration</strong></p>
+            <p>Synthesizing historical foundations with the frontiers of modern electrodynamics.</p>
+            <p class="copyright">© 2026 Kongpop U-yen. Hosted via GitHub Pages.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
